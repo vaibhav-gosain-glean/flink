@@ -157,9 +157,9 @@ public final class DefaultSlotPoolServiceSchedulerFactory
                 ClusterOptions.getSchedulerType(configuration);
         if (schedulerType == JobManagerOptions.SchedulerType.Adaptive && jobType == JobType.BATCH) {
             LOG.info(
-                    "Adaptive Scheduler configured, but Batch job detected. Changing scheduler type to NG / DefaultScheduler.");
+                    "Adaptive Scheduler configured, but Batch job detected. Changing scheduler type to AdaptiveBatch.");
             // overwrite
-            schedulerType = JobManagerOptions.SchedulerType.Ng;
+            schedulerType = JobManagerOptions.SchedulerType.AdaptiveBatch;
         }
 
         switch (schedulerType) {
